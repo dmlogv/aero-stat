@@ -1,5 +1,5 @@
 class Track:
-    def __init__(self, name, author):
+    def __init__(self, name, artist):
         self.name = name
-        self.author = author
+        self.artist = artist
         self.length = None

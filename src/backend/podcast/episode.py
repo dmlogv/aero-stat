@@ -51,5 +51,4 @@ class Episode:
         nodes = soup.find_all(*self.Qualifiers.song)
         self.raw_tracks = [node.string for node in nodes]
 
-
         logging.debug(f'Loaded: "{self.raw_tracks}"')

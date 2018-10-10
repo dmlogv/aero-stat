@@ -4,6 +4,8 @@ import dateutil.parser
 import requests
 from bs4 import BeautifulSoup as bs
 
+import track
+
 
 class Episode:
     class Qualifiers:
@@ -53,3 +55,7 @@ class Episode:
         self.raw_tracks = [node.string for node in nodes]
 
         logging.debug(f'Loaded: "{self.raw_tracks}"')
+
+    def parse_tracks(self):
+        for raw in self.raw_tracks:
+            self.tracks.append(track.Track(self.podcast.artists, raw=raw))

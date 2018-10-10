@@ -30,4 +30,6 @@ class Podcast:
         for node in nodes:
             url = node.get('href')
             abs_url = urllib.parse.urljoin(self.url, url)
-            self.episodes.append(episode.Episode(abs_url))
+            e = episode.Episode(self, abs_url)
+            self.episodes.append(e)
+            e.parse_tracks()

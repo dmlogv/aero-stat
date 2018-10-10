@@ -12,7 +12,8 @@ class Episode:
         title = ['h1', {'class': 'post-title'}]
         date = ['time', {'itemprop': 'datePublished'}]
 
-    def __init__(self, url=None):
+    def __init__(self, podcast, url=None):
+        self.podcast = podcast
         self.url = None
 
         self.id = None

@@ -3,6 +3,7 @@ import logging
 import sys
 import unittest
 
+from . import Podcast
 from episode import Episode
 
 
